@@ -147,6 +147,9 @@ function checkOwnName(senderId, message) {
     else if(message.indexOf("satyam") !== -1 || message.indexOf("ankit") !== -1) {
         sendMessage(senderId, { text: "Yo bitches. The bot is trolling you."});
     }
+    else if(message == "what do you do") {
+        sendMessage(senderId, { text: "I fetch info about movies. Type back any more name."});
+    }
     else {
         findMovie(senderId, message);
     }
