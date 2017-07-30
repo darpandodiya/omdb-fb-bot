@@ -139,7 +139,7 @@ function checkOwnName(senderId, message) {
         sendMessage(senderId, { text: "Yep, I'm open source. Find me on GitHub at: https://github.com/darpandodiya/omdb-fb-bot"});
     }
     else {
-        findMovie(senderId, formattedMsg);
+        findMovie(senderId, message);
     }
 }
 
