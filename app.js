@@ -138,6 +138,12 @@ function checkOwnName(senderId, message) {
     else if(message.indexOf("source") !== -1 || message.indexOf("code") !== -1 ) {
         sendMessage(senderId, { text: "Yep, I'm open source. Find me on GitHub at: https://github.com/darpandodiya/omdb-fb-bot"});
     }
+    else if(message.indexOf("hi") !== -1 || message.indexOf("hello") !== -1 || message.indexOf("hey") !== -1) {
+        sendMessage(senderId, { text: "Hey. How're you doing today?"});
+    }
+    else if(message.indexOf("fine") !== -1 && message.indexOf("you") !== -1 ) {
+        sendMessage(senderId, { text: "I'm good as well. Though, on a side note, bots are always in good mood anything. :P"});
+    }
     else {
         findMovie(senderId, message);
     }
