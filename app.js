@@ -121,7 +121,7 @@ function processMessage(event) {
                     
             }
         } else if (message.attachments) {
-            sendMessage(senderId, { text: "Sorry, I don't understand your request. You can ask me about movies." });
+            sendMessage(senderId, { text: "Sorry, I don't understand your request. You can ask me about movies.\n\nOr if you're feeling lucky, type 'who', 'code', 'developer' etc." });
         }
     }
 }
@@ -130,10 +130,10 @@ function checkOwnName(senderId, message) {
     
     if(message.indexOf("darpan") !== -1 || message.indexOf("creat") !== -1 
         || message.indexOf("develop") !== -1 || message.indexOf("author") !== -1 ) {
-        sendMessage(senderId, { text: "Hey there, Darpan here. I noticed that you've mentioned my name. In case if you're wondering, yes I have programmed this bot. You can know more about me at www.darpandodiya.com"});
+        sendMessage(senderId, { text: "Hey there, Darpan here.\n\nI noticed that you've mentioned my name. In case if you're wondering, yes I have programmed this bot. Pretty cool, yeah? You can know more about me at www.darpandodiya.com"});
     }
-    else if(message.indexOf("who") !== -1) {
-        sendMessage(senderId, { text: "I'm just a bot. :) I run on commands of a guy named Darpan. Type Darpan to know more."});
+    else if(message.indexOf("who") !== -1 || message.indexOf("you") !== -1) {
+        sendMessage(senderId, { text: "I'm just a bot. :)\n\nI run on commands of a guy named Darpan. Type Darpan to know more."});
     }
     else if(message.indexOf("source") !== -1 || message.indexOf("code") !== -1 ) {
         sendMessage(senderId, { text: "Yep, I'm open source. Find me on GitHub at: https://github.com/darpandodiya/omdb-fb-bot"});
@@ -183,12 +183,12 @@ function getEntireMovieDetail(userId) {
             sendMessage(userId, { text: "Something went wrong. Try again" });
         } else {
             sendMessage(userId, { text: movie["title"] + " : " + movie["year"] + "\n\n" 
-                                    +   movie["title"] + " is a movie released in " + movie["year"] + ", directed by " + movie["director"] + ".\n" 
-                                    +   "Here's its plot: " + movie["plot"] + + "\n" 
-                                    +   "Genre: " + movie["genre"] + "\n"
-                                    +   "Cast: " + movie["cast"] + "\n"
-                                    +   "The movie was rated " + movie["imdb_rating"] + " at IMDb and given " + movie["metascore"] + " Metascore." + "\n"
-                                    +   "It was produced by " + movie["production"] + ". " + movie["title"] + " earned " + movie["box_office"] + " at the box office." + "\n"
+                                    +   movie["title"] + " is a movie released in " + movie["year"] + ", directed by " + movie["director"] + ".\n\n" 
+                                    +   "Here's its plot: " + movie["plot"] + + "\n\n" 
+                                    +   "Genre: " + movie["genre"] + "\n\n"
+                                    +   "Cast: " + movie["cast"] + "\n\n"
+                                    +   "The movie was rated " + movie["imdb_rating"] + " at IMDb and given " + movie["metascore"] + " Metascore." + "\n\n"
+                                    +   "It was produced by " + movie["production"] + ". " + movie["title"] + " earned " + movie["box_office"] + " at the box office." + "\n\n"
                                     +   "Here's its official website: " + movie["website_url"] 
                                 });
         }
