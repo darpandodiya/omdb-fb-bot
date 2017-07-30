@@ -182,7 +182,7 @@ function getEntireMovieDetail(userId) {
         if (err) {
             sendMessage(userId, { text: "Something went wrong. Try again" });
         } else {
-            sendMessage(userId, { text: movie[title] 
+            sendMessage(userId, { text: movie["title"] 
                                 });
         }
     });
