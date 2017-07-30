@@ -109,6 +109,14 @@ function processMessage(event) {
           getMovieDetail(senderId, formattedMsg);
           break;
 
+        case "satyam":
+            sendMessage(senderId, {text: "Satyam is chutiya person."});
+            break;
+
+        case "ankit":
+            sendMessage(senderId, {text: "Bihari babu."});
+            break;
+
         default:
           findMovie(senderId, formattedMsg);
       }
