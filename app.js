@@ -125,14 +125,14 @@ function processMessage(event) {
 
 function checkOwnName(senderId, message) {
     
-    if(string.indexOf("darpan") !== -1 || string.indexOf("creat") !== -1 
-        || string.indexOf("develop") !== -1 || string.indexOf("author") !== -1 ) {
+    if(message.indexOf("darpan") !== -1 || message.indexOf("creat") !== -1 
+        || message.indexOf("develop") !== -1 || message.indexOf("author") !== -1 ) {
         sendMessage(senderId, { text: "Hey there, Darpan here. I noticed that you've mentioned my name. In case if you're wondering, yes I have programmed this bot. You can know more about me at www.darpandodiya.com"});
     }
-    else if(string.indexOf("who") !== -1) {
+    else if(message.indexOf("who") !== -1) {
         sendMessage(senderId, { text: "I'm just a bot. :) I run on commands of a guy named Darpan. Type Darpan to know more."});
     }
-    else if(string.indexOf("source") !== -1 || string.indexOf("code") !== -1 ) {
+    else if(message.indexOf("source") !== -1 || message.indexOf("code") !== -1 ) {
         sendMessage(senderId, { text: "Yep, I'm open source. Find me on GitHub at: https://github.com/darpandodiya/omdb-fb-bot"});
     }
     else {
