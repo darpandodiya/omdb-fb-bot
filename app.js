@@ -132,17 +132,20 @@ function checkOwnName(senderId, message) {
         || message.indexOf("develop") !== -1 || message.indexOf("author") !== -1 ) {
         sendMessage(senderId, { text: "Hey there, Darpan here.\n\nI noticed that you've mentioned my name. In case if you're wondering, yes I have programmed this bot. Pretty cool, yeah? You can know more about me at www.darpandodiya.com"});
     }
-    else if(message.indexOf("who") !== -1 || message.indexOf("you") !== -1) {
+    else if(message.indexOf("who") !== -1 && message.indexOf("you") !== -1) {
         sendMessage(senderId, { text: "I'm just a bot. :)\n\nI run on commands of a guy named Darpan. Type Darpan to know more."});
     }
     else if(message.indexOf("source") !== -1 || message.indexOf("code") !== -1 ) {
         sendMessage(senderId, { text: "Yep, I'm open source. Find me on GitHub at: https://github.com/darpandodiya/omdb-fb-bot"});
     }
-    else if(message.indexOf("hi") !== -1 || message.indexOf("hello") !== -1 || message.indexOf("hey") !== -1) {
+    else if(message == "hi" || message == "hello" || message == "hey") {
         sendMessage(senderId, { text: "Hey. How're you doing today?"});
     }
-    else if(message.indexOf("fine") !== -1 && message.indexOf("you") !== -1 ) {
-        sendMessage(senderId, { text: "I'm good as well. Though, on a side note, bots are always in good mood anything. :P"});
+    else if(message == "fine") {
+        sendMessage(senderId, { text: "Cool. I'm good as well. Though, on a side note, bots are always in good mood anything. :P"});
+    }
+    else if(message.indexOf("satyam") !== -1 || message.indexOf("ankit") !== -1) {
+        sendMessage(senderId, { text: "Yo bitches. The bot is trolling you."});
     }
     else {
         findMovie(senderId, message);
@@ -264,10 +267,10 @@ function findMovie(userId, movieTitle) {
                 });
             } else {
                 console.log(movieObj.Error);
-                sendMessage(userId, { text: movieObj.Error });
+                sendMessage(userId, { text: "Something went wrong with OMDb API. Please try again. \n\nOr if you're feeling lucky, type 'who', 'code', 'developer' etc." });
             }
         } else {
-            sendMessage(userId, { text: "Something went wrong with OMDb API. Please try again." });
+            sendMessage(userId, { text: "Something went wrong with OMDb API. Please try again. \n\nOr if you're feeling lucky, type 'who', 'code', 'developer' etc." });
         }
     });
 }
