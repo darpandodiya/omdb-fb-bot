@@ -1,0 +1,18 @@
+{
+  "name": "omdb-fb-bot",
+  "version": "1.0.0",
+  "description": "A Facebook Messenger bot that uses Open Movie Database (OMDb) APIs to talk about movies.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Darpan Dodiya <darpandodiya@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.4",
+    "request": "^2.81.0"
+  }
+}
