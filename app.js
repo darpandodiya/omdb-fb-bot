@@ -130,7 +130,7 @@ function checkOwnName(senderId, message) {
     
     if(message.indexOf("darpan") !== -1 || message.indexOf("creat") !== -1 
         || message.indexOf("develop") !== -1 || message.indexOf("author") !== -1 ) {
-        sendMessage(senderId, { text: "Hey there, Darpan here.\n\nI noticed that you've mentioned my name. In case if you're wondering, yes I have programmed this bot. Pretty cool, yeah? You can know more about me at www.darpandodiya.com"});
+        sendMessage(senderId, { text: "Hey there, Darpan here.\n\nI noticed that you've mentioned my name. In case if you're wondering, yes I have programmed this bot. Pretty cool, yeah? \n\nYou can know more about me at www.darpandodiya.com"});
     }
     else if(message.indexOf("who") !== -1 && message.indexOf("you") !== -1) {
         sendMessage(senderId, { text: "I'm just a bot. :)\n\nI run on commands of a guy named Darpan. Type Darpan to know more."});
