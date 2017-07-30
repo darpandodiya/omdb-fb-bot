@@ -182,7 +182,14 @@ function getEntireMovieDetail(userId) {
         if (err) {
             sendMessage(userId, { text: "Something went wrong. Try again" });
         } else {
-            sendMessage(userId, { text: movie["title"] 
+            sendMessage(userId, { text: movie["title"] + " : " + movie["year"] + "\n\n" 
+                                    +   movie["title"] + " is a movie released in " + movie["year"] + ", directed by " + movie["director"] + ".\n" 
+                                    +   "Here's its plot: " + movie["plot"] + + "\n" 
+                                    +   "Genre: " + movie["genre"] + "\n"
+                                    +   "Cast: " + movie["cast"] + "\n"
+                                    +   "The movie was rated " + movie["imdb_rating"] + " at IMDb and given " + movie["metascore"] + " Metascore." + "\n"
+                                    +   "It was produced by " + movie["production"] + ". " + movie["title"] + " earned " + movie["box_office"] + " at the box office." + "\n"
+                                    +   "Here's its official website: " + movie["website_url"] 
                                 });
         }
     });
