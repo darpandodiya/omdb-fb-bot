@@ -5,6 +5,8 @@ Try it out at: [http://m.me/1595800180494652](http://m.me/1595800180494652 "http
 
 Note: OMDb API has gone private now. The bot may stop fetching movie details.
 
+Backstory and more detailed account: [https://www.darpandodiya.com/code/chatbot-chronicles-omdb-facebook-messenger-bot/](https://www.darpandodiya.com/code/omdb-facebook-messenger-bot/)
+
 ----------
 **Built With:**   
 - Node.js - Backend express server  
